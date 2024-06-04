@@ -21,7 +21,7 @@ const eventClick = () => {
     v-bind="props"
     @click="eventClick"
     type="button"
-    class="w-full cursor-pointer text-white bg-forth hover:bg-forth/90 focus:ring-4 focus:ring-blue-300 font-medium rounded-sm text-sm px-3 py-2 focus:outline-none"
+    class="w-full cursor-pointer text-white bg-orange-500 hover:bg-forth/90 focus:ring-4 focus:ring-blue-300 font-medium rounded-sm text-sm px-3 py-2 focus:outline-none"
   >
     {{ label }}
   </button>

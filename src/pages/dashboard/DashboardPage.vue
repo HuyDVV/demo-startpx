@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { getCurrentUser } from 'aws-amplify/auth'
 import { onMounted, ref } from 'vue'
+import StarpxTypingAnimation from '@/components/common/StarpxTypingAnimation.vue'
+import AuthBackground from '../authentication/AuthBackground.vue'
 const username = ref()
 
 onMounted(async () => {
@@ -10,7 +12,8 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="bg-primary min-h-[100vh] min-w-[100vw] px-10 py-5">
-    <span class="text-lg font-bold text-zinc-100">Welcome back StarPX, {{ username }}</span>
+  <div class="px-10 py-5 overflow-x-hidden">
+    <AuthBackground />
+    <StarpxTypingAnimation :text="`Welcome back StarPX, ${username}. Have a good day.`" />
   </div>
 </template>
